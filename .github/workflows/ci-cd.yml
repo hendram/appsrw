@@ -1,0 +1,38 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - test-appsrw
+  pull_request:
+    branches:
+      - test-appsrw
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up environment similar to Debian Bullseye
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y curl gnupg lsb-release
+        curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        node -v
+        npm -v
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Update dependencies
+      run: npm update
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build
+      run: npm run build
