@@ -16,15 +16,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
-    - name: Set up environment similar to Debian Bullseye
+    - name: Install Node.js 20
       run: |
-        sudo apt-get update
-        sudo apt-get install -y curl gnupg lsb-release
         curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
         sudo apt-get install -y nodejs
         node -v
