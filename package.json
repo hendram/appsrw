@@ -13,7 +13,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+<<<<<<< HEAD
+    "build": "CI=false react-scripts build",
+>>>>>>> 700ca8e (updated console.log)
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
