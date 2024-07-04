@@ -26,13 +26,11 @@ const month = useRef(null);
 
 const fillinupdate = (actionvalue) => {
          temp.current = actionvalue;
-     console.log(temp.current);
 }
 
 
 useEffect(() => {
  if(temp.current !== undefined){
-  console.log(temp.current.nama);
 
   nama.current.value = temp.current.nama;
   tempatlahir.current.value = temp.current.tempatlahir;

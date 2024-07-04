@@ -27,7 +27,7 @@ if(data.tokenu){
              localStorage.setItem('tokenu', data.tokenu);
          }
           catch (error) {
-               console.log(error);
+               console.error(error);
          }
           props.opendataprocess("true");
 }
@@ -50,7 +50,7 @@ async function sendSigninMess(){
              localStorage.setItem('token', data.token);
          }
           catch (error) {
-               console.log(error);
+               console.error(error);
          }
           props.openadminpage("true");
 }
@@ -59,7 +59,7 @@ async function sendSigninMess(){
              localStorage.setItem('tokenu', data.tokenu);
          }
           catch (error) {
-               console.log(error);
+               console.error(error);
  }        
           props.opendataprocess("true");
 }

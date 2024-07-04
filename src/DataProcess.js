@@ -39,7 +39,6 @@ updatedatatxtcolor: "white"};
 const handleInputclick = (event) => {
   event.stopPropagation();
     event.preventDefault();
-console.log("fuck");
 
     let newviewcomp = {search: "Searchhid", inputdata: "Inputdatashow", 
    updatedata: "Updatedatahid" };

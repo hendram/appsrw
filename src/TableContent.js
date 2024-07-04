@@ -10,7 +10,6 @@ const [listrow, setListrow]  = useState([]);
 useEffect(() =>  {
 let newlistrow = [];
 for(let a = 0; a < props.dataget.length; a++){
-           console.log(props.dataget[a]);
            
    if((a % 2 === 0) || (a === 0)){
               let tampilkeno;

@@ -32,7 +32,6 @@ const handleSubmitoperator = async(event) => {
     let namaoperator = operatorname.current.value;
             if((namaoperator !== "") || (namaoperator !== undefined) || (randomx !== undefined)){
     let operatordata = {"operatorname": namaoperator, "invite": randomx }
-         console.log("masuk ke operatordata");
 
 try {
     const token = localStorage.getItem('token');
@@ -66,7 +65,6 @@ const handleDeleteoperator = async(event) => {
     let namaoperator = operatorname.current.value;
             if((namaoperator !== "") || (namaoperator !== undefined)){
     let operatordata = {"operatorname": namaoperator }
-         console.log("masuk ke operatordata");
 
 
 try {
@@ -155,7 +153,7 @@ const handleUpload = async (event) => {
      setUploadfile({open: "Uploadhid"})
 }
 })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
 }
 
 

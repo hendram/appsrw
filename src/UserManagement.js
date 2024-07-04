@@ -56,7 +56,6 @@ const filterUnit = () => {
 const dicarinama = async() => {
 
      let dicari = {"nama": words.current[0], "lowlimit": lowLimit.current.toString(), "highlimit": highLimit.current.toString()};
-      console.log(dicari);
 
 
 try {
@@ -73,7 +72,6 @@ try {
                body: JSON.stringify(dicari)
 }).then((response) => response.json()
    ).then(function(data){
-     console.log(data.answer);
      if(data.answer){
         setDataget([...data.answer]);
 }
@@ -111,7 +109,6 @@ try {
                body: JSON.stringify(dicari)
 }).then((response) => response.json()
    ).then(function(data){
-     console.log(data.answer);
      if(data.answer){
         setDataget(data.answer);
 }
@@ -128,7 +125,6 @@ try {
 }
 
 const callyangdicari = async() => {
-        console.log(yangdicari.current[0]);
 
          if(yangdicari.current[0] === "nama"){
          dicarinama();
@@ -162,14 +158,12 @@ const handleKeydown = async (event) => {
          
       if(words.current.length !== 0){
           words.current.length = 0;
-         console.log(event.target.value);
         words.current.push(event.target.value);
           }
          else {
         words.current.push(event.target.value);
            }       
 
-         console.log(words.current[0]);
         callyangdicari(); 
 }
 
